@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="siteCelular.css">
+    <link rel="stylesheet" type="text/css" href="css/siteCelular.css">
     <title>Jogo da Cobrinha</title>
 </head>
-
 <body>
     <header>
         <a href="cobrinha.html">
@@ -15,24 +14,25 @@
     </header>
 
     <div class="sidenav">
+        <!--  Introduzindo quaisquer outras melhorias ao jogo que possa melhorar a interatividade do usuário -->
+        <form action="cobrinha.html">
+            <input type="submit" value="VOLTAR PARA MODO NORMAL" id="botaoCelular" />
+        </form>
+
         <div class="d-inline">
             <label>Pontuação:</label>
             <div id="scoreDisplay" class="scoreDisplay"></div>
         </div>
         
-        <form action="cobrinha celular.html">
-            <input type="submit" value="VOLTAR PARA MODO NORMAL" id="botaoCelular" />
-        </form>
-
-        <div class="popup">
-            <button class="playAgain" id="playAgain">JOGAR NOVAMENTE!</button>
-        </div>
-
         <div class="button" id="botoesControle">
             <button class="top">Acima</button>
             <button class="bottom">Abaixo</button>
             <button class="left">Esquerda</button>
             <button class="right">Direita</button>
+        </div>
+
+        <div class="popup">
+            <button class="playAgain" id="playAgain">JOGAR NOVAMENTE!</button>
         </div>
     </div>  
 
@@ -40,13 +40,9 @@
         <div class="grid"></div> 
     </div>
 
-    <!--  Introduzindo quaisquer outras melhorias ao jogo que possa melhorar a interatividade do usuário -->
+    
 
-    <div class="footer"> 
-        
-    </div>
-
-    <script src="site.js"></script>
+    <script src="js/siteCelular.js"></script>
 
 </body>
 
