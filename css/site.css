@@ -6,6 +6,7 @@
 body {
     background-color: rgb(134, 200, 5);
     font-family: 'Pixelfont';
+    text-align: center;
 }
    
 
@@ -17,6 +18,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    background-image: url('/css/img/gramado.jpg');
 }
 
 .grid div {
@@ -40,7 +42,7 @@ body {
     width: 225px;
     height: 100px;
     display: flex;
-    margin-left:50px !important;
+    margin-left:133px !important;
     top: 100px;
     left: 100px;
 }
@@ -65,7 +67,7 @@ label{
 }
 
 .d-inline{
-    margin-left:50px !important;
+    margin-left:115px !important;
 }
 
 #scoreDisplay{
@@ -77,8 +79,9 @@ img{
 }
 
 #botoesControle{
-    margin-top: 15px;
+    margin-top: 30px;
     text-align: center;
+    margin-left: 75px;
 }
 
 #playAgain{
@@ -93,7 +96,7 @@ img{
 
 .sidenav {
     height: 100%; 
-    width: 300px; 
+    width: 400px; 
     position: fixed; 
     z-index: 1; 
     top: 50; 
@@ -115,6 +118,8 @@ button{
     border: solid 1px;
     border-radius: 10px;
     font-size: 20px !important;
+    margin-left: 40px;
+    margin-bottom: 15px;
 }
 
 .footer{
@@ -129,18 +134,4 @@ button{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-}
-
-.container {
-    border: 1px solid #DDDDDD;
-    width: 200px;
-    height: 200px;
-    position:relative;
-}
-
-.tag {
-   
-    position: absolute;
-    left: 0px;
-    top: 0px;
 }
