@@ -1,4 +1,4 @@
-    
+
 let grid = document.querySelector(".grid")
 let popup = document.querySelector(".popup");
 let playAgain = document.querySelector(".playAgain");
@@ -16,6 +16,15 @@ let score = 0;
 let speed = 0.8;
 let intervalTime = 0;
 let interval = 0;
+let dead = new Audio();
+let eat = new Audio();
+let movements = new Audio();
+const background = new Image();
+
+eat.src = 'audios/eat.mp3';
+dead.src = 'audios/dead.mp3';
+movements.src = 'audios/movements.mp3';
+background.src = 'img/gramado.jpg';
 
 document.addEventListener("DOMContentLoaded",function(){
     document.addEventListener("keydown",control);
@@ -24,8 +33,24 @@ document.addEventListener("DOMContentLoaded",function(){
     playAgain.addEventListener("click", replay);
 });
 
+var sound = document.getElementById("movesAudio");
+
+    function playAudio(){
+        sound.play();
+    }
 
 
+var sound2 = document.getElementById("eatAudio");
+
+    function playAudio2(){
+        sound2.play();
+    }
+
+var sound3 = document.getElementById("deadAudio");
+
+    function playAudio3(){
+        sound3.play();
+    }
 // createboard function
 
 function createBoard(){
@@ -46,15 +71,19 @@ document.addEventListener("keydown", function(event) {
     switch (key) { 
       case "ArrowLeft":
         direction = -1;
+        movesAudio.play();
         break;
       case "ArrowRight":
         direction= 1;
+        movesAudio.play();
         break;
       case "ArrowUp":
         direction = -width;
+        movesAudio.play();
         break;
       case "ArrowDown":
         direction = +width;
+        movesAudio.play();
         break;
     }
   });
@@ -95,7 +124,7 @@ function moveSnake(squares){
     squares[currentSnake[0]].classList.add("snake");
 }
 
-function checkForHits(squares){
+function checkForHits(squares){ // Aqui foi incluso o efeito sonoro de quando acaba o jogo
     if(
     (currentSnake[0] + width >= (width*width) && direction === width) ||
     (currentSnake[0] % width === width -1 && direction === 1) ||
@@ -103,18 +132,20 @@ function checkForHits(squares){
     (currentSnake[0] - width <= 0 && direction === -width) ||
     squares[currentSnake[0] + direction].classList.contains("snake")
     ){
+        deadAudio.play();
         return true
     } else{
         return false
     }
 }
 
-function eatApple(squares, tail){
+function eatApple(squares, tail){ // Aqui está incluso o efeito sonoro de comer
     if (squares[currentSnake[0]].classList.contains("apple")){
         squares[currentSnake[0]].classList.remove("apple")
         squares[tail].classList.add("snake")
         currentSnake.push(tail)
         randomApple(squares)
+        eatAudio.play();
         score++
         scoreDisplay.textContent = score
         clearInterval(interval)
@@ -130,15 +161,19 @@ function randomApple(squares){
         squares[appleIndex].classList.add("apple")
 }
 
-function control(e){ 
+function control(e, movesAudio){ // Aqui estão inclusos os sons de movimento
 	if (e.keycode===39){
         direction= 1;
+        playAudio(movesAudio);
 	}else if (e.keycode===38){ 
 		direction = -width; //if we press the up arrow, the snake will go ten divs up
+        playAudio(movesAudio);
 	}else if (e.keycode===37){ 
 		direction = -1; // left, the snake will go left one div
+        playAudio(movesAudio);
 	}else if (e.keycode===40){
 		direction = +width; // down the snake head will instantly appear 10 divs below from the current div 
+        playAudio(movesAudio);
 	}
 } 
 

@@ -12,6 +12,18 @@
         <p>Jogo da Cobrinha - Snake Game</p>
     </header>
 
+    <audio id="movesAudio">
+        <source src="css/audios/movements.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="eatAudio">
+        <source src="css/audios/eat.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="deadAudio">
+        <source src="css/audios/dead.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="sidenav">
         <!--  Introduzindo quaisquer outras melhorias ao jogo que possa melhorar a interatividade do usuário -->
         <form action="cobrinha celular.html">
@@ -24,10 +36,10 @@
         </div>
         
         <div class="button" id="botoesControle">
-            <button class="top">Acima</button>
-            <button class="bottom">Abaixo</button>
-            <button class="left">Esquerda</button>
-            <button class="right">Direita</button>
+            <button class="top" onclick="playAudio(sound)" type="button">Acima</button>
+            <button class="bottom" onclick="playAudio(sound)" type="button">Abaixo</button>
+            <button class="left" onclick="playAudio(sound)" type="button">Esquerda</button>
+            <button class="right" onclick="playAudio(sound)" type="button">Direita</button>
         </div>
 
         <div class="popup">
@@ -38,8 +50,6 @@
     <div class="main">
         <div class="grid"></div>
     </div>
-
-    <!--  Introduzindo quaisquer outras melhorias ao jogo que possa melhorar a interatividade do usuário -->
 
     <script src="js/site.js"></script>
 
