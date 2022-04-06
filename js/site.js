@@ -55,7 +55,7 @@ var sound3 = document.getElementById("deadAudio");
 
 function createBoard(){
     popup.style.display = "none";
-    for(let i=0;i<100;i++){
+    for(let i=0;i<400;i++){
         let div =document.createElement("div");
         grid.appendChild(div)
     }
