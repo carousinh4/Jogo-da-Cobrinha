@@ -30,8 +30,6 @@ body {
 .grid div {
     width: 10px;
     height: 10px;
-    border: 1px black solid;
-    box-sizing: border-box
 }
 
 .snake {
