@@ -24,7 +24,6 @@ const background = new Image();
 eat.src = 'audios/eat.mp3';
 dead.src = 'audios/dead.mp3';
 movements.src = 'audios/movements.mp3';
-background.src = 'img/gramado.jpg';
 
 document.addEventListener("DOMContentLoaded",function(){
     document.addEventListener("keydown",control);
@@ -33,12 +32,12 @@ document.addEventListener("DOMContentLoaded",function(){
     playAgain.addEventListener("click", replay);
 });
 
+// Função pra adicionar audio ao movimento
 var sound = document.getElementById("movesAudio");
 
     function playAudio(){
         sound.play();
     }
-
 
 var sound2 = document.getElementById("eatAudio");
 
@@ -55,7 +54,7 @@ var sound3 = document.getElementById("deadAudio");
 
 function createBoard(){
     popup.style.display = "none";
-    for(let i=0;i<100;i++){
+    for(let i=0;i<400;i++){
         let div =document.createElement("div");
         grid.appendChild(div)
     }

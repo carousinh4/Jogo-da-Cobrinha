@@ -18,7 +18,6 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    background-image: url('/css/img/gramado.jpg');
 }
 
 .grid div {

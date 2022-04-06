@@ -7,7 +7,8 @@ let left = document.querySelector(".left")
 let bottom = document.querySelector(".bottom")
 let right = document.querySelector(".right")
 let up = document.querySelector(".top")
-let width = 10;
+let height = 15;
+let width = 20;
 let currentIndex = 0;
 let appleIndex = 0;
 let currentSnake = [2, 1, 0];
@@ -56,7 +57,7 @@ var sound3 = document.getElementById("deadAudio");
 
 function createBoard(){
     popup.style.display = "none";
-    for(let i=0;i<100;i++){
+    for(let i=0;i<280;i++){
         let div =document.createElement("div");
         grid.appendChild(div)
     }
