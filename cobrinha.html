@@ -13,9 +13,10 @@
 <body>
 
     <header>
-        <p>Jogo da Cobrinha - Snake Game</p>
+        <p>Jogo da Cobrinha</p>
     </header>
 
+    <!--Incluindo os efeitos sonoros de movimento, comer e bater-->
     <audio id="movesAudio">
         <source src="css/audios/movements.mp3" type="audio/mpeg">
     </audio>
@@ -28,8 +29,8 @@
         <source src="css/audios/dead.mp3" type="audio/mpeg">
     </audio>
 
+    <!--  Introduzindo quaisquer outras melhorias ao jogo que possa melhorar a interatividade do usuário -->
     <div class="sidenav">
-        <!--  Introduzindo quaisquer outras melhorias ao jogo que possa melhorar a interatividade do usuário -->
         <form action="cobrinha celular.html">
             <input type="submit" value="EXPERIMENTE O MODO CELULAR!" id="botaoCelular" />
         </form>
@@ -38,7 +39,8 @@
             <label>Pontuação:</label>
             <div id="scoreDisplay" class="scoreDisplay"></div>
         </div>
-        
+    
+    <!-- Botões que controlam a cobrinha-->
         <div class="button" id="botoesControle">
             <button class="top" onclick="playAudio(sound)" type="button">Acima</button>
             <button class="bottom" onclick="playAudio(sound)" type="button">Abaixo</button>
